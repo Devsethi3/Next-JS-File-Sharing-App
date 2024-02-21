@@ -1,8 +1,8 @@
-import { DM_Sans } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const dmSans = DM_Sans({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
   title: "File Sharing App",
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             type="image/x-icon"
           />
         </head>
-        <body className={dmSans.className}>{children}</body>
+        <body className={outfit.className}>{children}</body>
       </html>
     </ClerkProvider>
   );
